@@ -7,9 +7,21 @@
 
 # Despliegue y configuración de Mongo con interfaz web con Docker
 
-## Primeros pasos (Pendiente)
-A modo de preparación del servidor, recuerda tener tu servidor y la herramienta docker perfectamente actualizado a la ultima versión disponible.
+## 1. Descarga
+
+Descarga el documento comprimido del cluster 
+
+<!--Enlace para descargar el archivo o no-->
+
+> [!TIP]
+> Recuerda tener tu servidor y la herramienta docker perfectamente actualizado a la ultima versión disponible.
+
+>[!NOTE]
+> Puedes realizar algunos cambio en el documento *docker-compose.yml* para modificar la versión Mongo. Si decides usar una versión más reciente, comprueba la compatibilidad de tu procesador con tecnología AVX[^1].
 
 ## Documentos
 
 La estructura de los documentos se organizará de la siguiente manera:
+
+
+[^1]: En nuestro despliegue se hace uso de Mongo v4.4.29
