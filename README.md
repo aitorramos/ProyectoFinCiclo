@@ -26,7 +26,21 @@ En el documento YAML se debe configurar los usuarios para el access control:
 <!--Info sobre linea, etc-->
 
 ### 3. Web
+Modificar la linea 
+```
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+```
 
+por la siguiente linea
+```
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+```
+
+Se crea un directorio llamado public donde se encontrará el index.html que hará de pagina cuando se conecte al servidor web
 
 ### 4. Iniciar el YAML
 Una vez se tenga configurado los documentos del YAML se iniciará el documento.
@@ -37,7 +51,7 @@ Una vez se tenga configurado los documentos del YAML se iniciará el documento.
 
 ### 5. Comprobaciones
 
-Para comprobar solo deber
+Para comprobar se puede realizar
 
 
 [^1]: En nuestro despliegue se hace uso de Mongo v4.4.29
