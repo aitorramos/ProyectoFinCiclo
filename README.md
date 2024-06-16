@@ -5,9 +5,9 @@
 > [!CAUTION]
 > Este proyecto está pendiente de calificación
 
-# Despliegue y configuración de Mongo con interfaz web con Docker
+## Despliegue y configuración de Mongo con interfaz web con Docker
 
-## 1. Descarga
+### 1. Descarga
 
 Descarga el documento comprimido del cluster 
 
@@ -19,9 +19,25 @@ Descarga el documento comprimido del cluster
 >[!NOTE]
 > Puedes realizar algunos cambio en el documento *docker-compose.yml* para modificar la versión Mongo. Si decides usar una versión más reciente, comprueba la compatibilidad de tu procesador con tecnología AVX[^1].
 
-## Documentos
+### 2. Configurar el access control
 
-La estructura de los documentos se organizará de la siguiente manera:
+En el documento YAML se debe configurar los usuarios para el access control:
+
+<!--Info sobre linea, etc-->
+
+### 3. Web
+
+
+### 4. Iniciar el YAML
+Una vez se tenga configurado los documentos del YAML se iniciará el documento.
+
+```
+    docker-compose up -d
+```
+
+### 5. Comprobaciones
+
+Para comprobar solo deber
 
 
 [^1]: En nuestro despliegue se hace uso de Mongo v4.4.29
