@@ -21,7 +21,19 @@ Descarga el documento comprimido del cluster
 
 ### 2. Configurar el access control
 
-En el documento YAML se debe configurar los usuarios para el access control:
+Para configurar el access control de la base de datos mongo se debe crear una keyfile, durante todo este proceso se usará el super usuario `sudo su`. Lo primero será crear el archivo.
+```
+touch mongo-keyfile
+```
+Posterior mente se creará una clave y se intriducirá en el archivo anteriormente creado
+```
+open rand -base64 756 > mongo-keyfile
+```
+Y finalmente se dota de los permisos necesarios al archivo
+```
+chmod 400 mongo-keyfile
+```
+
 
 <!--Info sobre linea, etc-->
 
