@@ -21,7 +21,7 @@ Descarga el documento comprimido del cluster
 
 ### 2. Configurar el access control
 
-Para configurar el access control de la base de datos mongo se debe crear una keyfile, durante todo este proceso se usará el super usuario `sudo su`. Lo primero será crear el archivo.
+Para configurar el access control de la base de datos mongo se debe crear una keyfile, durante todo este proceso se usará el super usuario, `sudo su`. Lo primero será crear el archivo.
 ```
 touch mongo-keyfile
 ```
@@ -33,11 +33,38 @@ Y finalmente se dota de los permisos necesarios al archivo
 ```
 chmod 400 mongo-keyfile
 ```
+<!--Los usuarios que se deseen añadir se indicaran en el archivo YAML-->
+
+### 3. Configurar ReplicaSet
+
+Se entrará en uno de los contenedores mongo y se introducirá
+```
+docker exec -it mongo1 mongo --eval "rs.initiate({_id: \"myReplicaSet\", members: [{_id: 0, host: \"mongo1\"}, {_id: 1, host:
+ \"mongo2\"}, {_id: 2, host: \"mongo3\"}]})"
+```
+Una vez introducido, la información del contenedor primario se replicará en los demás
+
+### 4. Añadir usuarios
+
+Para añadir usuarios se entrará en el servidor primario y se introducirá el usuario y la contraseña con el comando `db.createUser`.
+```
+ db.createUser({
+...   user: "admin",
+...   pwd: "password123",
+...   roles: [{ role: "root", db: "admin" }]
+... })
+```
+
+### 5. Migrar la base de datos
+
+Por ultimo se introducirá la base de datos que se quiera almacenar. En este caso lo haremos en formato `.csv` con el comando `mongoimport`. 
+```
+ mongoimport --db Ventas --collection Productos --type csv --file Productos.csv --headerline -u admin -p password123 --authen
+ticationDatabase admin
+```
 
 
-<!--Info sobre linea, etc-->
-
-### 3. Web
+### 6. web
 Modificar la linea 
 ```
 app.get('/', (req, res) => {
