@@ -2,7 +2,8 @@
 
 ## Despliegue y configuración de Mongo con interfaz web con Docker
 
-### 1. Descarga
+<details>
+<sumary> ### 1. Descarga </summary>
 
 Descarga el documento comprimido del cluster que aparece en al principio del repositorio.
 
@@ -11,7 +12,8 @@ Descarga el documento comprimido del cluster que aparece en al principio del rep
 > Recuerda tener tu servidor y la herramienta docker perfectamente actualizado a la ultima versión disponible.
 
 >[!NOTE]
-> Puedes realizar algunos cambio en el documento *docker-compose.yml* para modificar la versión Mongo. Si decides usar una versión más reciente, comprueba la compatibilidad de tu procesador con tecnología AVX[^1].
+> Puedes realizar algunos cambio en el documento `docker-compose.yml` para modificar la versión Mongo. Si decides usar una versión más reciente, comprueba la compatibilidad de tu procesador con tecnología `AVX`[^1].
+</details>
 
 ### 2. Configurar el access control
 
@@ -39,7 +41,7 @@ Los usuarios que podrán acceder a la base de datos se indicarán en el `YAML`de
 
 ### 3. Configurar ReplicaSet
 
-Se entrará en uno de los contenedores mongo y se introducirá
+Se entrará en uno de los contenedores mongo y se introducirá:
 ```
 docker exec -it mongo1 mongo --eval "rs.initiate({_id: \"myReplicaSet\", members: [{_id: 0, host: \"mongo1\"}, {_id: 1, host:
  \"mongo2\"}, {_id: 2, host: \"mongo3\"}]})"
@@ -67,7 +69,7 @@ ticationDatabase admin
 
 
 ### 6. web
-Modificar la linea 
+Para montar el archivo web con el que dar apariencia a tu API, modifica la linea 
 ```
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -81,7 +83,7 @@ app.get('/', (req, res) => {
 });
 ```
 
-Se crea un directorio llamado public donde se encontrará el index.html que hará de pagina cuando se conecte al servidor web
+Y posteriormente, crea un directorio llamado public donde se encontrará el index.html que hará de pagina cuando se conecte al servidor web
 
 
 
