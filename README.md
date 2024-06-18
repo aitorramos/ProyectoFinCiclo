@@ -2,8 +2,7 @@
 
 ## Despliegue y configuración de Mongo con interfaz web con Docker
 
-<details>
-<summary> ### 1. Descarga </summary>
+### 1. Descarga
 
 Descarga el documento comprimido del cluster que aparece en al principio del repositorio.
 
@@ -13,7 +12,6 @@ Descarga el documento comprimido del cluster que aparece en al principio del rep
 
 >[!NOTE]
 > Puedes realizar algunos cambio en el documento `docker-compose.yml` para modificar la versión Mongo. Si decides usar una versión más reciente, comprueba la compatibilidad de tu procesador con tecnología `AVX`[^1].
-</details>
 
 ### 2. Configurar el access control
 
