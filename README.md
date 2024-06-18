@@ -1,17 +1,11 @@
 # ProyectoFinCiclo
-> [!NOTE] 
-> Este es el Proyecto de Fin de Ciclo de Aitor Ramos y Alejandro Jimeno, alumnos del Ciclo Formativo de Grado Superior de Administración de Sistemas Informáticos en Red
-
-> [!CAUTION]
-> Este proyecto está pendiente de calificación
 
 ## Despliegue y configuración de Mongo con interfaz web con Docker
 
 ### 1. Descarga
 
-Descarga el documento comprimido del cluster 
+Descarga el documento comprimido del cluster que aparece en al principio del repositorio.
 
-<!--Enlace para descargar el archivo o no-->
 
 > [!TIP]
 > Recuerda tener tu servidor y la herramienta docker perfectamente actualizado a la ultima versión disponible.
@@ -82,3 +76,14 @@ app.get('/', (req, res) => {
 Se crea un directorio llamado public donde se encontrará el index.html que hará de pagina cuando se conecte al servidor web
 
 
+
+
+Y ya estaría configurado el cluster en el servidor.
+
+> [!NOTE] 
+> Este es el Proyecto de Fin de Ciclo de Aitor Ramos y Alejandro Jimeno, alumnos del Ciclo Formativo de Grado Superior de Administración de Sistemas Informáticos en Red
+
+> [!CAUTION]
+> Este proyecto está pendiente de calificación
+
+[^1]: En este caso los contenedores Mongo son con la versioón 4.4.29
