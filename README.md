@@ -27,7 +27,15 @@ Y finalmente se dota de los permisos necesarios al archivo
 ```
 chmod 400 mongo-keyfile
 ```
-<!--Los usuarios que se deseen añadir se indicaran en el archivo YAML-->
+
+Los usuarios que podrán acceder a la base de datos se indicarán en el `YAML`dentro del apartado `enviroments` del `mongo-express`
+
+```
+  - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+  - ME_CONFIG_MONGODB_ADMINPASSWORD=password123
+```
+
+
 
 ### 3. Configurar ReplicaSet
 
