@@ -82,4 +82,3 @@ app.get('/', (req, res) => {
 Se crea un directorio llamado public donde se encontrará el index.html que hará de pagina cuando se conecte al servidor web
 
 
-### 7. 
