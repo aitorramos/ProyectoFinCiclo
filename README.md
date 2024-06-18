@@ -28,7 +28,7 @@ Y finalmente se dota de los permisos necesarios al archivo
 chmod 400 mongo-keyfile
 ```
 
-Los usuarios que podrán acceder a la base de datos se indicarán en el `YAML`dentro del apartado `enviroments` del `mongo-express`
+Los usuarios que podrán acceder a la base de datos se indicarán en el `YAML`dentro del apartado `enviroments` del `mongo-express`.
 
 ```
   - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
