@@ -3,7 +3,7 @@
 ## Despliegue y configuración de Mongo con interfaz web con Docker
 
 <details>
-<sumary> ### 1. Descarga </summary>
+<summary> ### 1. Descarga </summary>
 
 Descarga el documento comprimido del cluster que aparece en al principio del repositorio.
 
