@@ -81,16 +81,5 @@ app.get('/', (req, res) => {
 
 Se crea un directorio llamado public donde se encontrará el index.html que hará de pagina cuando se conecte al servidor web
 
-### 4. Iniciar el YAML
-Una vez se tenga configurado los documentos del YAML se iniciará el documento.
 
-```
-    docker-compose up -d
-```
-
-### 5. Comprobaciones
-
-Para comprobar se puede realizar
-
-
-[^1]: En nuestro despliegue se hace uso de Mongo v4.4.29
+### 7. 
